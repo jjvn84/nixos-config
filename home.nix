@@ -18,11 +18,19 @@
     dbeaver-bin
     mongodb-compass
 
+    # Entertainment
+    spotify
+
     # Messaging and communication tools
     discord
     slack
+    zoom-us
 
     # Office tools
+    drawing
+    drawio
+    calibre
+    gnucash
     libreoffice
 
     # Programming tools

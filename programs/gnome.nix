@@ -25,8 +25,10 @@
         # Set which apps show up in the dock
         favorite-apps = [
           "google-chrome.desktop"
+          "slack.desktop"
           "org.gnome.Calendar.desktop"
           "org.gnome.Nautilus.desktop"
+          "code.desktop"
         ];
         # disable-user-extensions must be false to run external extensions
         disable-user-extensions = false;
