@@ -10,14 +10,28 @@
   home.homeDirectory = "/home/juan";
 
   home.packages = with pkgs; [
+    # Browsers
+    brave
     google-chrome
 
-    nixfmt # Formatter for .nix files
+    # Database clients
+    dbeaver-bin
+    mongodb-compass
+
+    # Messaging and communication tools
+    discord
+    slack
+
+    # Office tools
+    libreoffice
+
+    # Programming tools
+    direnv
+    bruno
     nil # LSP server for the nix language
     nixd # LSP server for the nix language
+    nixfmt # Formatter for .nix files
 
-
-    direnv
   ];
 
   # Install and configure git
