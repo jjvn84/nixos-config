@@ -2,6 +2,9 @@
 {
 
   home.packages = with pkgs; [
+    # Dconf editor
+    dconf-editor
+
     # Gnome Extensions
     gnomeExtensions.random-wallpaper
     gnomeExtensions.tiling-shell
