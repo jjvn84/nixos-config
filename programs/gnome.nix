@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, lib, ... }:
 {
 
   home.packages = with pkgs; [
@@ -6,8 +6,9 @@
     dconf-editor
 
     # Gnome Extensions
+    gnomeExtensions.paperwm
     gnomeExtensions.random-wallpaper
-    gnomeExtensions.tiling-shell
+    # gnomeExtensions.tiling-shell
     gnomeExtensions.vitals
 
   ];
@@ -19,6 +20,7 @@
       # Dark mode
       "org/gnome/desktop/interface" = {
         color-scheme = "prefer-dark";
+        accent-color = "teal";
       };
       # Add maximize and minimize buttons to windows
       "org/gnome/desktop/wm/preferences" = {
@@ -40,14 +42,29 @@
         enabled-extensions = [
           "Vitals@CoreCoding.com"
           "randomwallpaper@iflow.space"
-          "tilingshell@ferrarodomenico.com"
+          # "tilingshell@ferrarodomenico.com"
+          "paperwm@paperwm.github.com"
         ];
 
-        "extensions/vitals/hot-sensors" = [
+      };
+
+      # Configure stats for Vitals extension
+      "org/gnome/shell/extensions/vitals" = {
+        hot-sensors = [
           "_processor_usage_"
           "_memory_usage_"
           "__network-rx_max__"
         ];
+      };
+
+      # Configure PaperWM
+      "org/gnome/shell/extensions/paperwm" = {
+        horizontal-margin = lib.hm.gvariant.mkInt32 6;
+        selection-border-size = lib.hm.gvariant.mkInt32 6;
+        show-workspace-indicator = false;
+        vertical-margin = lib.hm.gvariant.mkInt32 6;
+        vertical-margin-bottom = lib.hm.gvariant.mkInt32 6;
+        window-gap = lib.hm.gvariant.mkInt32 6;
       };
     };
   };
