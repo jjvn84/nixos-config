@@ -1,4 +1,4 @@
-{ pkgs, lib, ... }:
+{ pkgs, ... }:
 {
 
   home.packages = with pkgs; [
@@ -59,12 +59,12 @@
 
       # Configure PaperWM
       "org/gnome/shell/extensions/paperwm" = {
-        horizontal-margin = lib.hm.gvariant.mkInt32 6;
-        selection-border-size = lib.hm.gvariant.mkInt32 6;
+        horizontal-margin = 6;
+        selection-border-size = 6;
         show-workspace-indicator = false;
-        vertical-margin = lib.hm.gvariant.mkInt32 6;
-        vertical-margin-bottom = lib.hm.gvariant.mkInt32 6;
-        window-gap = lib.hm.gvariant.mkInt32 6;
+        vertical-margin = 6;
+        vertical-margin-bottom = 6;
+        window-gap = 6;
       };
     };
   };
