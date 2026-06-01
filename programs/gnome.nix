@@ -18,10 +18,11 @@
   dconf = {
     enable = true;
     settings = {
-      # Dark mode
+      # Dark mode, teal accent, show weekday in top bat
       "org/gnome/desktop/interface" = {
-        color-scheme = "prefer-dark";
         accent-color = "teal";
+        color-scheme = "prefer-dark";
+        clock-show-weekday = true;
       };
       # Add maximize and minimize buttons to windows
       "org/gnome/desktop/wm/preferences" = {
