@@ -57,6 +57,11 @@
     flake = "/home/juan/.nixos-config";
   };
 
+  # Enable and configure the Ollama service
+  services.ollama = {
+    enable = true;
+  };
+
   # Let Home Manager manage shell/dotfiles natively
   programs.bash.enable = true;
 
