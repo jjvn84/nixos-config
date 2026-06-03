@@ -62,6 +62,11 @@
     enable = true;
   };
 
+  # Enable and configure the Opencode
+  programs.opencode = {
+    enable = true;
+  };
+
   # Let Home Manager manage shell/dotfiles natively
   programs.bash.enable = true;
 
