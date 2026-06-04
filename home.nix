@@ -34,8 +34,9 @@
     libreoffice
 
     # Programming tools
-    direnv
-    bruno
+    dioxus-cli # CLI tool for Dioxus, a Rust-based UI framework
+    direnv # Tool that allows you to automatically load and unload environment variables based on the current directory
+    bruno # API client
     nil # LSP server for the nix language
     nixd # LSP server for the nix language
     nixfmt # Formatter for .nix files
