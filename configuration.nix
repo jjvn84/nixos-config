@@ -88,7 +88,9 @@
     isNormalUser = true;
     description = "Juan Vásquez";
     extraGroups = [
+      "adbusers"
       "docker"
+      "kvm"
       "networkmanager"
       "wheel"
     ];

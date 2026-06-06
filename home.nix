@@ -1,5 +1,29 @@
 { config, pkgs, ... }:
+let
+  # 1. Create a configured version of pkgs specifically for the Android builder
+  configuredPkgs = import pkgs.path {
+    inherit (pkgs) system;
+    config = {
+      allowUnfree = true;
+      android_sdk.accept_license = true;
+    };
+  };
+
+  # 2. Use that configured version here to build your global environment
+  globalAndroidEnv = configuredPkgs.androidenv.composeAndroidPackages {
+    includeEmulator = true;
+    includeSystemImages = true;
+
+    platformVersions = [ "34" ];
+    buildToolsVersions = [ "34.0.0" ];
+
+    systemImageTypes = [ "google_apis" ];
+    abiVersions = [ "x86_64" ];
+  };
+in
 {
+
+  nixpkgs.config.allowUnfree = true;
 
   imports = [
     ./programs/gnome.nix
@@ -10,6 +34,10 @@
   home.homeDirectory = "/home/juan";
 
   home.packages = with pkgs; [
+    # Android emulator
+    globalAndroidEnv.androidsdk
+    android-tools # Provides global command-line utilities like adb
+
     # Browsers
     brave
     google-chrome
@@ -42,6 +70,12 @@
     nixfmt # Formatter for .nix files
 
   ];
+
+  # Session variables so your terminal commands always know where to look
+  home.sessionVariables = {
+    ANDROID_HOME = "${globalAndroidEnv.androidsdk}/libexec/android-sdk";
+    ANDROID_SDK_ROOT = "${globalAndroidEnv.androidsdk}/libexec/android-sdk";
+  };
 
   # Install and configure git
   programs.git = {
