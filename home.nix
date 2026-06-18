@@ -60,6 +60,9 @@ in
     calibre
     gnucash
     libreoffice
+    lyx
+    texlive.combined.scheme-full
+    librsvg # Library for rendering SVG files, useful for documentation and design work. Needed by LyX for rendering SVG images in documents.
 
     # Programming tools
     dioxus-cli # CLI tool for Dioxus, a Rust-based UI framework
