@@ -62,6 +62,12 @@
           version = "1.25.0";
           sha256 = "sha256-iz32o1znwKpbJSdrDYf+GDPC++uGvsCdUuGaQu6AWEo=";
         }
+        {
+          name = "sqltools";
+          publisher = "mtxr";
+          version = "0.28.3"; # Adjust version if a newer one is live
+          sha256 = "sha256-bTrHAhj8uwzRIImziKsOizZf8+k3t+VrkOeZrFx7SH8=";
+        }
       ];
     # Set the theme in userSettings
     profiles.default.userSettings = {
