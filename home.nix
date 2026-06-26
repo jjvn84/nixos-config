@@ -2,7 +2,7 @@
 let
   # 1. Create a configured version of pkgs specifically for the Android builder
   configuredPkgs = import pkgs.path {
-    inherit (pkgs) system;
+    system = pkgs.stdenv.hostPlatform.system;
     config = {
       allowUnfree = true;
       android_sdk.accept_license = true;
@@ -22,8 +22,6 @@ let
   };
 in
 {
-
-  nixpkgs.config.allowUnfree = true;
 
   imports = [
     ./programs/gnome.nix
