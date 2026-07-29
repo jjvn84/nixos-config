@@ -38,8 +38,6 @@
         ms-vscode.remote-explorer
         # Rust
         rust-lang.rust-analyzer
-        # Themes
-        jdinhlife.gruvbox # Gruvbox theme
         # Viewers
         ms-toolsai.datawrangler
       ]
@@ -72,7 +70,7 @@
     # Set the theme in userSettings
     profiles.default.userSettings = {
       "editor.formatOnSave" = true;
-      "workbench.colorTheme" = "Gruvbox Dark Hard";
+      "workbench.colorTheme" = "Dark Modern";
     };
   };
 }
