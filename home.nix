@@ -60,7 +60,7 @@ in
     gnucash
     libreoffice
     lyx
-    texlive.combined.scheme-full
+    texliveMedium
     librsvg # Library for rendering SVG files, useful for documentation and design work. Needed by LyX for rendering SVG images in documents.
 
     # Programming tools
