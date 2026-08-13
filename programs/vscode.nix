@@ -71,6 +71,7 @@
     profiles.default.userSettings = {
       "editor.formatOnSave" = true;
       "workbench.colorTheme" = "Dark Modern";
+      "python.analysis.typeCheckingMode" = "standard";
     };
   };
 }
