@@ -42,8 +42,7 @@ in
 
     # Database clients
     dbeaver-bin
-    # NEED TO RE-ADD LATER
-    # mongodb-compass
+    mongodb-compass
 
     # Entertainment
     spotify
