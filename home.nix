@@ -46,6 +46,7 @@ in
 
     # Entertainment
     spotify
+    guvcview
 
     # Messaging and communication tools
     discord
