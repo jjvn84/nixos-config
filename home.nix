@@ -50,6 +50,7 @@ in
 
     # Messaging and communication tools
     discord
+    openvpn
     slack
     zoom-us
 

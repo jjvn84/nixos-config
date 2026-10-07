@@ -28,7 +28,14 @@
   # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
 
   # Enable networking
-  networking.networkmanager.enable = true;
+  networking.networkmanager = {
+    enable = true;
+    plugins = with pkgs; [ networkmanager-openvpn ];
+  };
+
+  # Needed for OpenVPN to work with NetworkManager
+  services.gnome.gnome-keyring.enable = true;
+  security.polkit.enable = true;
 
   # Set your time zone.
   time.timeZone = "America/Caracas";
