@@ -85,6 +85,13 @@
     # use the example session manager (no others are packaged yet so this is enabled by default,
     # no need to redefine it in your config for now)
     #media-session.enable = true;
+
+    # Desactivar el volumen por hardware para Bluetooth
+    wireplumber.extraConfig.bluetoothEnhancements = {
+      "monitor.bluez.properties" = {
+        "bluez5.enable-hw-volume" = false;
+      };
+    };
   };
 
   # Enable touchpad support (enabled default in most desktopManager).
