@@ -37,7 +37,7 @@ in
     android-tools # Provides global command-line utilities like adb
 
     # Browsers
-    brave
+    # brave # Removed temporarily due to issues with the Brave browser on NixOS. Consider using an alternative browser like Firefox or Chromium.
     google-chrome
 
     # Database clients
