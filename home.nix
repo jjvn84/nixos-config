@@ -53,6 +53,7 @@ in
     openvpn
     slack
     zoom-us
+    proton-vpn
 
     # Office tools
     drawing
