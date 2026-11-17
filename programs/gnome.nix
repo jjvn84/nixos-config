@@ -6,7 +6,7 @@
     dconf-editor
 
     # Gnome Extensions
-    gnomeExtensions.paperwm
+    # gnomeExtensions.paperwm
     gnomeExtensions.random-wallpaper
     gnomeExtensions.spotify-controls
     # gnomeExtensions.tiling-shell
@@ -45,7 +45,7 @@
           "Vitals@CoreCoding.com"
           "randomwallpaper@iflow.space"
           # "tilingshell@ferrarodomenico.com"
-          "paperwm@paperwm.github.com"
+          # "paperwm@paperwm.github.com"
           "spotify-controls@Sonath21"
         ];
 
