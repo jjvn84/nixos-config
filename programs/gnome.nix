@@ -5,12 +5,16 @@
     # Dconf editor
     dconf-editor
 
+    # Wallpaper changer
+    variety
+
     # Gnome Extensions
     # gnomeExtensions.paperwm
     gnomeExtensions.random-wallpaper
-    gnomeExtensions.spotify-controls
+    # gnomeExtensions.spotify-controls
     # gnomeExtensions.tiling-shell
     gnomeExtensions.vitals
+    gnomeExtensions.advanced-media-controller
 
   ];
 
@@ -46,7 +50,8 @@
           "randomwallpaper@iflow.space"
           # "tilingshell@ferrarodomenico.com"
           # "paperwm@paperwm.github.com"
-          "spotify-controls@Sonath21"
+          # "spotify-controls@Sonath21"
+          "advanced-media-controller@sanjai.com"
         ];
 
       };
@@ -60,15 +65,21 @@
         ];
       };
 
-      # Configure PaperWM
-      "org/gnome/shell/extensions/paperwm" = {
-        horizontal-margin = 6;
-        selection-border-size = 6;
-        show-workspace-indicator = false;
-        vertical-margin = 6;
-        vertical-margin-bottom = 6;
-        window-gap = 6;
+      # Configure settings for Advanced Media Controller extension
+      "org/gnome/shell/extensions/advanced-media-controller" = {
+        panel-index = 1;
+        panel-position = "left";
       };
+
+      # Configure PaperWM
+      # "org/gnome/shell/extensions/paperwm" = {
+      #   horizontal-margin = 6;
+      #   selection-border-size = 6;
+      #   show-workspace-indicator = false;
+      #   vertical-margin = 6;
+      #   vertical-margin-bottom = 6;
+      #   window-gap = 6;
+      # };
     };
   };
 }
