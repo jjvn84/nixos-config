@@ -23,7 +23,7 @@
         esbenp.prettier-vscode
         # Nix
         jnoortheen.nix-ide
-        mkhl.direnv
+        arrterian.nix-env-selector
         # Python
         ms-python.python
         ms-python.vscode-pylance
