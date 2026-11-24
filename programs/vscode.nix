@@ -56,6 +56,12 @@
           sha256 = "sha256-FwHjYjFy0Dk0i7G+Y8htwXKk2+lAqol2lTNkK4zzrd8=";
         }
         {
+          name = "vscode-opentofu";
+          publisher = "opentofu";
+          version = "0.6.3";
+          sha256 = "sha256-q1Em4j1vlwCKcoXWRUArVkGlAMIrGb9onJBWlUFjRgU=";
+        }
+        {
           name = "path-autocomplete";
           publisher = "ionutvmi";
           version = "1.25.0";
@@ -73,6 +79,12 @@
       "editor.formatOnSave" = true;
       "workbench.colorTheme" = "Dark Modern";
       "python.analysis.typeCheckingMode" = "standard";
+
+      # The marketplace VSIX bundles an ARM64 `tofu-ls`, which fails on x86_64
+      # with exit code 126 ("cannot execute binary file"). Point the extension
+      # at the x86_64 builds from Nix instead.
+      "opentofu.languageServer.path" = "${pkgs.tofu-ls}/bin/tofu-ls";
+      "opentofu.languageServer.tofu.path" = "${pkgs.opentofu}/bin/tofu";
     };
   };
 }
