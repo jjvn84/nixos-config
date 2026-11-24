@@ -46,8 +46,8 @@
         {
           name = "autopep8";
           publisher = "ms-python";
-          version = "2026.4.0";
-          sha256 = "sha256-pr2lIWBV1Uya09lMa8BXzVRBjP5NRzmbkuLqFwGwq/U=";
+          version = "2026.6.0";
+          sha256 = "sha256-3n/SRVmaQ41F3291CFADj6oNf+zVnoN9ljmwy2DRfbU=";
         }
         {
           name = "dioxus";
@@ -64,14 +64,14 @@
         {
           name = "path-autocomplete";
           publisher = "ionutvmi";
-          version = "1.25.0";
-          sha256 = "sha256-iz32o1znwKpbJSdrDYf+GDPC++uGvsCdUuGaQu6AWEo=";
+          version = "1.26.0";
+          sha256 = "sha256-DVHAhQnc78yf1dwjmRxhWNYCsSiYlvJlmqhtO4jKofE=";
         }
         {
           name = "sqltools";
           publisher = "mtxr";
-          version = "0.28.3"; # Adjust version if a newer one is live
-          sha256 = "sha256-bTrHAhj8uwzRIImziKsOizZf8+k3t+VrkOeZrFx7SH8=";
+          version = "0.28.6"; # Adjust version if a newer one is live
+          sha256 = "sha256-SpVFH+Qf9tpnNm4J5z3fOhWzzYP0LknDNm88JHMxkIU=";
         }
       ];
     # Set the theme in userSettings
